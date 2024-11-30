@@ -1,0 +1,28 @@
+<div class="left">
+    <div class="explanation">
+        <div>
+          <h2>Assista</h2>
+          <p>Encontre mais 1000 vídeos instantaneamente.</p>
+        </div>
+        <div>
+          <h2>Carregue</h2>
+          <p>Faça upload rapidamente e marque com tag seus vídeos em qualquer formato.</p>
+        </div>
+        <div>
+          <h2>Compartilhe</h2>
+          <p>Facilmente compartilhe seus vídeos com familiares, amigos e colegas de trabalho</p>
+        </div>
+     </div>
+      <div class="videos">
+        <div class="heading"> 
+        <h1 class="title">Videos publicados recentemente</h1>
+        <div class="more-videos">
+           <a href="more" >Veja mais vídeos</a>
+        </div>
+        </div>
+        @for(video of videos;track video){
+          <app-video-card [videos]="video"></app-video-card>
+        }
+        </div>
+          
+</div>

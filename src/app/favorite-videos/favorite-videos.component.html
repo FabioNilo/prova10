@@ -1,0 +1,43 @@
+
+<div class="youtube page">
+  <div class="navigation--main">
+    <div class="logo">
+      <img src="https://www.gstatic.com/youtube/img/branding/youtubelogo/svg/youtubelogo.svg" />
+    </div>
+    <div class="links">
+      <div class="links--list">
+        <a [routerLink]="['']" routerLinkActive="router-link-active" >Home</a>
+        <a href="#"><span class="ribbon">Assita</span> Videos</a>
+        <a href="#"><div class="ribbon">Carregue</div> Videos</a>
+        <a href="#"><div class="ribbon">Convide</div> Amigos</a>
+      </div>
+    </div>
+</div>
+  <app-user-navigation></app-user-navigation>
+
+  @if(videos.length > 0){
+    @for(video of videos; track video){
+        <div class="video">
+            <img [src]="video.thumbnail" [alt]="video.title" />
+            <div class="desc">
+              <h3>{{ video.title }}</h3>
+              <p>{{ video.description }}</p>
+              <p>
+                <strong>Likes:</strong> {{ video.likes }} |
+                <strong>Views:</strong> {{ video.views }}
+              </p>
+              <button (click)="likeVideos(video)">Curtir</button>
+              <button (click)="watchVideo(video)">Assistir</button>
+            </div>
+          </div>
+    }  
+}@else {
+    <p>Nenhum vídeo encontrado.</p>
+}
+</div>
+
+
+
+
+
+  

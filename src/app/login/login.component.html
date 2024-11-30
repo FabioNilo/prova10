@@ -1,0 +1,30 @@
+<header>
+    <img src="https://www.gstatic.com/youtube/img/branding/youtubelogo/svg/youtubelogo.svg" alt="Logo do youtube" />
+   
+  </header>
+
+<form [formGroup]="form" (ngSubmit)="onSubmit()">
+    <h2>Entrar</h2>
+    <div class="control-row">
+      <div class="control no-margin">
+        <label for="email">Email</label>
+        <input id="email" type="email" [formControl]="form.controls.email"/>
+      </div>
+      <div class="control no-margin">
+        <label for="password">Senha</label>
+        <input id="password" type="password" formControlName="password" />
+      </div>
+      <button class="button">Login</button>
+    </div>
+    <a (click)="LoginSocial()">Entrar com conta social</a>
+     @if(invalidEmail){
+      <p class="control-error">
+        Você digitou e-mail inválido
+      </p>
+     }
+     @if(invalidPassword){
+      <p class="control-error">
+        Por favor, use pelo menos 06 caracteres.
+      </p>
+     }
+  </form>

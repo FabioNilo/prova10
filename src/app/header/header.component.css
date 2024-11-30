@@ -1,0 +1,208 @@
+body {
+  background-color: #f9f9f9;
+  margin-top: 2em;
+}
+.content {
+  display: flex;
+}
+.youtube {
+  width: 1280px;
+  margin: auto;
+  font-family: "Roboto", "Noto", sans-serif;
+  font-size: 14px;
+  line-height: 22px;
+}
+
+.ribbon {
+  display: inline;
+  background-color: rgb(204, 0, 0);
+  border-radius: 2px;
+  padding: 4px 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.007px;
+  color: white;
+}
+
+
+a {
+  font-weight: 500;
+  color: #292929;
+  text-decoration: none;
+}
+
+.page {
+  display: flex;
+  flex-direction: column;
+}
+
+.heading {
+  display: flex;
+  flex-direction: column;
+}
+
+
+.navigation--main {
+    display: flex;
+}
+
+.ribbon {
+    display: inline;
+    background-color: rgb(204, 0, 0);
+    border-radius: 2px;
+    padding: 4px 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.007px;
+    color: white;
+  }
+
+a {
+    font-weight: 500;
+    color: #292929;
+    text-decoration: none;
+  }
+
+.navigation--main > .links {
+    flex-grow: 1;
+  }
+  
+.logo {
+    align-self: center;
+    width: 19%;
+  }
+  
+.logo > span {
+    font-size: 3em;
+  }
+  
+.links--list {
+    display: flex;
+    justify-content: space-evenly;
+    font-size: 1.15em;
+  }
+  
+.links--quote {
+    padding-bottom: 0.75em;
+    margin-top: -0.35em;
+    font-size: 12px;
+    font-weight: 300;
+    padding-left: 1em;
+  }
+.links--account > a {
+    margin: 0 1em;
+  }
+.links--account > a:last-of-type {
+    margin-right: 0;
+  }
+
+  @media (max-width: 1024px) {
+    .youtube {
+      width: 90%;
+      margin: auto;
+    }
+  
+    .video {
+      flex-direction: column; 
+      align-items: center;
+    }
+  
+    .video > .image > img {
+      width: 280px; 
+      height: 160px;
+      border-radius: 10px; 
+    }
+  
+    .video > .desc {
+      margin-left: 0;
+      margin-top: 1em;
+      width: 100%;
+      padding: 1em;
+      border-radius: 10px; 
+    }
+  
+    .navigation--main {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+  
+    .logo {
+      width: 100%;
+      text-align: center;
+      margin-bottom: 1em;
+    }
+  
+    .links--list {
+      flex-direction: column;
+      gap: 1em;
+      text-align: center;
+    }
+  
+    .links--quote {
+      padding-left: 0;
+      text-align: center;
+    }
+  
+    .links--account > a {
+      display: inline-block;
+      margin: 0.5em;
+    }
+  }
+  
+  
+  @media (max-width: 768px) {
+    .youtube {
+      width: 95%;
+      font-size: 13px; 
+    }
+  
+    .video > .image > img {
+      width: 220px; 
+      border-radius: 12px;
+    }
+  
+    .video > .desc {
+      font-size: 12px;
+      padding: 0.8em;
+      border-radius: 12px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+    }
+  
+    .links--list {
+      font-size: 0.9em;
+    }
+  
+    .ribbon {
+      font-size: 11px;
+      padding: 3px 8px;
+    }
+  }
+  
+  
+  @media (max-width: 480px) {
+    .video > .image > img {
+      width: 160px;
+      height: 90px;
+      border-radius: 15px;
+    }
+  
+    .video > .desc {
+      font-size: 10px;
+      padding: 0.6em;
+      border-radius: 15px;
+      margin-top: 0.5em;
+    }
+  
+    .links--list {
+      font-size: 0.8em;
+      gap: 0.5em;
+    }
+  
+    .links--quote {
+      font-size: 10px;
+    }
+  
+    .ribbon {
+      font-size: 10px;
+      padding: 2px 6px;
+    }
+  }
+  

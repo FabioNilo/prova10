@@ -1,0 +1,28 @@
+<div class="left">
+    <div class="navigation--user">
+        <a href="#">Meus Vídeos</a>
+        <a [routerLink]="['/favorites']" routerLinkActive="router-link-active">Favoritos</a>
+        <a href="#">Meu Perfil</a>
+    </div>
+    <div class="navigation--search">
+        <div class="search-box">
+        <input type="text" [(ngModel)]="searchTerm" /><button class="search-button" (click)="onSearch()">Search Videos</button>
+        </div>
+    </div>
+    @if(searchResults.length > 0){
+        @for(video of searchResults; track video){
+            <div class="video">
+                <img [src]="video.thumbnail" [alt]="video.title" />
+                <div class="desc">
+                  <h3>{{ video.title }}</h3>
+                  <p>{{ video.description }}</p>
+                  <p>
+                    <strong>Likes:</strong> {{ video.likes }} 
+                    <strong>Views:</strong> {{ video.views }}
+                </div>
+                
+              </div>
+        }  }@else {
+            
+        }
+</div>

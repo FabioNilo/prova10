@@ -1,0 +1,73 @@
+<div class="youtube page">
+  <div class="navigation--main">
+  <div class="logo">
+    <img src="https://www.gstatic.com/youtube/img/branding/youtubelogo/svg/youtubelogo.svg" alt="YouTube Logo" />
+  </div>
+  <div class="profile-section">
+    <div>
+      <button (click)="toggleMenu()" class="profile-button">
+        @if(profile?.picture){
+          <img
+          [src]="profile?.picture"
+          [alt]="profile?.name || 'User profile'"
+          class="profile-image"
+        >
+        }
+        @if(!profile?.picture){
+          <span class="profile-placeholder">
+            <i class="fas fa-user"></i>
+          </span>
+        }
+       
+        <span class="profile-name">
+          {{profile?.name || 'Usuário'}}
+        </span>
+        <i class="fas fa-chevron-down arrow-icon"></i>
+      </button>
+    </div>
+
+    <div *ngIf="isMenuOpen" class="dropdown-menu">
+      <div class="dropdown-content">
+        <div class="user-info">
+          <p class="user-name">{{profile?.name}}</p>
+          <p class="user-email">{{profile?.email}}</p>
+        </div>
+        
+        <button class="menu-item">
+          <i class="fas fa-cog"></i>
+          Configurações
+        </button>
+        <button (click)="logout()" class="menu-item logout">
+          <i class="fas fa-sign-out-alt"></i>
+          Sair
+        </button>
+      </div>
+    </div>
+  </div>
+
+  </div>
+  
+<div class="content">
+  @if(favoriteVideos.length > 0){
+    @for(video of favoriteVideos; track video){
+        <div class="video">
+            <img [src]="video.thumbnail" [alt]="video.title" />
+            <div class="desc">
+              <h3>{{ video.title }}</h3>
+              <p>{{ video.description }}</p>
+              <p>
+                <strong>Likes:</strong> {{ video.likes }} |
+                <strong>Views:</strong> {{ video.views }}
+              </p>
+              <button (click)="likeVideos(video)">Curtir</button>
+              <button (click)="watchVideo(video)">Assistir</button>
+            </div>
+          </div>
+    }  
+}@else {
+    <p>Nenhum vídeo encontrado.</p>
+}
+
+</div>
+
+</div>

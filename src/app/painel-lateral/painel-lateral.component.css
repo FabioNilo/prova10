@@ -1,0 +1,41 @@
+.right {
+    width:105%;
+    margin-left: 1em;
+  }
+  
+  .right > .one {
+    background-color: red;
+    text-align: center;
+    border-radius: 2px;
+    border: 1px solid #EE0000;
+    padding: 1em;
+  }
+  
+  .right > .one > a {
+    color: white !important;
+  }
+  
+  .right > .two {
+    text-align: center;
+    padding: 1em;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    background-color: white;
+    border: 1px solid #e5e5e5;
+    border-radius: 2px;
+  }
+  
+  .right > .two > img {
+    width: 100%;
+  }
+
+  a {
+    font-weight: 500;
+    color: #292929;
+    text-decoration: none;
+  }
+  
+  
+  .right > .three {
+    padding-left: 0.5em;
+  }

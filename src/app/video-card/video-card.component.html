@@ -1,0 +1,16 @@
+<div class="video">
+    <div class="image">
+      <img src="{{videos.thumbnail}}" alt="{{videos.title}}" />
+    </div>
+    <div class="desc">
+      <h2>{{videos.title}}</h2>
+      <p>{{videos.description}}</p>
+      <p>Tags // 
+        @for( tag of videos.tags; track tag){
+            <span><a href="#">{{tag}}</a> : </span>
+        }
+      </p>
+      <p>Added {{videos.added}} by <a href="#">{{videos.author}}</a></p>
+      <p>Runtime: {{videos.runtime}} | Views: {{videos.views}} | Comments: {{videos.comments}}</p>
+    </div>
+  </div>

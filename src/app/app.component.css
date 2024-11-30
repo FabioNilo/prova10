@@ -1,0 +1,67 @@
+body {
+    background-color: #f9f9f9;
+    margin-top: 2em;
+  }
+  
+  .youtube {
+    width: 1280px;
+    margin: auto;
+    font-family: "Roboto", "Noto", sans-serif;
+    font-size: 14px;
+    line-height: 22px;
+  }
+  
+  .ribbon {
+    display: inline;
+    background-color: rgb(204, 0, 0);
+    border-radius: 2px;
+    padding: 4px 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.007px;
+    color: white;
+  }
+  
+  
+  a {
+    font-weight: 500;
+    color: #292929;
+    text-decoration: none;
+  }
+  
+  .page {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .heading {
+    display: flex;
+    flex-direction: column;
+  }
+  
+ 
+  
+  
+  
+
+ 
+  
+  
+  
+  
+  .magnifying-glass-icon {
+    display: inline;
+    position: relative;
+  }
+  .magnifying-glass-icon:before {
+    background-color: green;
+    width: 1em;
+    height: 1em;
+    border: 0.1em solid black; 
+  }
+  
+  .content {
+    display: flex;
+  }
+  
+
+  

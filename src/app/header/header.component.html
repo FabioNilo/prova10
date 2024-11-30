@@ -1,0 +1,33 @@
+
+<div class="youtube page">
+  <div class="navigation--main">
+    <div class="logo">
+      <img src="https://www.gstatic.com/youtube/img/branding/youtubelogo/svg/youtubelogo.svg" />
+    </div>
+    <div class="links">
+      <div class="links--quote">Atualize, marque sua tag e compartilhe vídeos pelo mundo</div>
+      <div class="links--list">
+        <a href="#">Home</a>
+        <a href="#"><span class="ribbon">Assita</span> Videos</a>
+        <a href="#"><div class="ribbon">Carregue</div> Videos</a>
+        <a href="#"><div class="ribbon">Convide</div> Amigos</a>
+      </div>
+    </div>
+    <div class="links--account">
+      @if(profile){
+        <a href="#" (click)="sair()" [routerLink]="['']">Sair</a><a href="#">Editar</a>
+
+      }@else {
+        <a href="#">Inscreva-se</a><a [routerLink]="['/login']" routerLinkActive="router-link-active" >Entrar</a><a href="#">Ajuda</a>
+
+      }
+      
+    </div>
+</div>
+  <app-user-navigation></app-user-navigation>
+  <div class="content">
+      <app-video-list></app-video-list>
+      <app-painel-lateral></app-painel-lateral>
+  </div>
+</div>
+  
