@@ -1,27 +1,31 @@
-# Prova10
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.2.6.
 
-## Development server
+Aqui está um exemplo de arquivo README.md para orientar quem deseja testar o projeto em seu próprio computador. Esse guia é baseado no seu package.json:
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+Projeto Angular 18
 
-## Code scaffolding
+Este é um projeto desenvolvido com Angular 18, com suporte para servidor JSON local. Este guia orienta como configurar e executar o projeto em sua máquina.
+É preciso ter instalado o Node.js e o Angular18.
+Inicie o Servidor JSON O projeto inclui um servidor JSON para simulação de dados. Para iniciá-lo, execute : npm run start:json-server. O servidor estará disponível em http://localhost:3000.
+Já o servidor Angular é iniciado com npm start.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Funcionalidades do Projeto
+Página Inicial
+Carregamento dos Vídeos:
 
-## Build
+A página inicial exibe um conjunto de cards de vídeos carregados via service.
+A funcionalidade de curtidas não foi implementada nesta página.
+Login Social:
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+O botão "Entrar" redireciona para a página de login através do link <a>Entrar</a>, configurado para acessar a rota /login.
+Na página de login, foi implementada a autenticação social utilizando o Auth0.
+Busca de Vídeos:
 
-## Running unit tests
+O botão de "Buscar" permite pesquisar vídeos. Para que a busca retorne resultados, é necessário digitar o título completo de um vídeo fornecido pelo backend.
+Navegação para Mais Vídeos:
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+O botão "Veja mais vídeos" redireciona para a rota /more. Nesta página, foi implementada a busca dinâmica nos dados fornecidos pelo backend.
+Aqui, as funcionalidades de curtidas e visualizações estão ativas:
+Curtidas: Clicar no botão de curtidas aumenta o contador no card.
+Visualizações: Clicar em "Assistir vídeo" aumenta o número de visualizações.
 
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
